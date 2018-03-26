@@ -10,19 +10,19 @@ match a query:
 
 [source,js]
 --------------------------------------------------
-POST /sales/_search?size=0
+POST /books/_search?size=0
 {
     "aggs" : {
         "type_count" : {
             "cardinality" : {
-                "field" : "type"
+                "field" : "authors"
             }
         }
     }
 }
 --------------------------------------------------
 // CONSOLE
-// TEST[setup:sales]
+// TEST[setup:books]
 
 Response:
 
